@@ -1,0 +1,612 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     scroll-behavior: smooth;
+     overflow-x: hidden;
+ }
+ 
+ header {
+     width: 100%;
+     height: 90vh;
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(background.jpg);
+     background-size: cover;
+     background-attachment: fixed;
+ }
+ 
+ nav {
+     width: 100%;
+     height: 80px;
+     background: white;
+     color: black;
+     display: flex;
+     /* justify-content:center; */
+     align-items: center;
+     padding: 0px 50px;
+     position: fixed;
+     top: 0;
+     left: 0px;
+     z-index: 99;
+ }
+ .logo
+ {
+     position: absolute;
+     /* top: 0px;
+     left: 0px; */
+ }
+ 
+ .logo a {
+     font-family: sans-serif;
+     font-size: 2em;
+     text-decoration: none;
+     color: black;
+ }
+ 
+ .logo span {
+     color: #7d0552;
+ }
+ .menu ul
+ {
+     list-style: none;
+     display: flex;
+    
+ }
+ 
+ .menu ul li a {
+     position: relative;
+     left: 30vw;
+     text-decoration: none;
+     color: black;
+     font-size: 1.2em;
+     font-family: sans-serif;
+     padding: 10px 20px;
+     text-transform: uppercase;
+     font-weight: 600;
+ }
+ 
+    ul li a.home
+ {
+     color: #7d0552;
+ }
+ 
+ .menu ul li a:hover {
+     color: #7d0552;
+ }
+ .btn
+ {
+    position: absolute;
+    right: 20px;
+ }
+ .btn button {
+     width: 10vw;
+     height: 6vh;
+     text-transform: capitalize;
+     font-weight: bold;
+     background: #7d0552;
+     color: white;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+ }
+ 
+ .btn button:hover
+  {
+     background-color: transparent;
+     border: 1px solid #7d0552;
+     color: #7d0552;
+  }
+
+ 
+ .h-text {
+     color: white;
+     max-width: 700px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+ }
+ 
+ #camera {
+     font-size: 40px;
+     margin-bottom: 10px;
+ }
+ 
+ .h-text h1 {
+     font-family: sans-serif;
+     font-size: 3ch;
+     line-height: 1.3em;
+ }
+ 
+ .h-text input {
+     width: 60%;
+     padding: 10px;
+     border: none;
+     outline: none;
+     font-size: 20px;
+     border-radius: 8px;
+ }
+ 
+ .h-text button {
+     width: 20%;
+     padding: 10px;
+     border: none;
+     outline: none;
+     font-size: 20px;
+     border-radius: 8px;
+     background: #7d0552;
+     color: white;
+     margin-top: 30px;
+ }
+ 
+ .filter-gallery {
+     padding: 10px;
+ }
+ 
+ .portfolio-menu {
+     margin-top: 60px;
+     text-align: center;
+ }
+ 
+ .portfolio-menu ul li {
+     list-style: none;
+     display: inline-block;
+     margin: 20px 0px;
+     padding: 10px 20px;
+     font-size: 1.5em;
+     font-weight: bold;
+     font-style: oblique;
+     transition: 0.5s ease;
+     text-align: center;
+     cursor: pointer;
+ }
+ 
+ .portfolio-menu ul li:hover {
+     color: white;
+     background: #7d0552;
+     border-radius: 10px;
+ }
+ 
+ li.active {
+     color: white;
+     background: #7d0552;
+     border-radius: 10px;
+ }
+ 
+ .portfolio-item {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     animation-name: zoom-in;
+ }
+ 
+ .portfolio-item .item {
+     width: 380px;
+     height: 260px;
+     /* float: left; */
+     margin-bottom: 20px;
+     margin-right: 20px;
+ }
+ 
+ .portfolio-item .item img {
+     width: 100%;
+     height: 100%;
+     border-radius: 8px;
+     object-fit: cover;
+     
+ }
+ 
+ .member
+ {
+     width: 100%;
+     padding: 20px ;
+     font-family: sans-serif;
+ }
+ .member-info
+ {
+     text-align: center;
+ }
+ .member-info h1
+ {
+     font-size: 2.5em;
+ }
+ .member-info h1 span
+ {
+     color: #7d0552;
+ }
+
+ .member-card
+ {
+     text-align: center;
+     padding-top: 50px;
+     width: 70%;
+     margin: auto;
+     font-family: sans-serif;
+ }
+ .member-profile
+ {
+     border-radius: 50%;
+     width: 8em;
+     height: 8em;
+ }
+ .member-info p
+ {
+     margin-top: 20px;
+     font-size: 1.2em;
+ }
+ .member-card p
+ {
+     margin: 20px 0px;
+     line-height: 1.5em ;
+     padding: 20px;
+     font-size: 1.5em;
+ }
+ .member-card h2
+ {
+     padding: 10px;
+     font-size: 2em;
+ }
+ .share img
+ {
+     margin: 20px;
+     width: 3em;
+     height: 3em;
+ }
+ .m-image
+ {
+     width: 100%;
+     display: flex;
+     flex-flow: wrap;
+     /* border: 2px solid red; */
+     border-radius: 10px;
+     overflow: hidden;
+ }
+ .m-image img
+ {
+     width: 200px;
+     height: 200px;
+     cursor: pointer;
+     transition: 0.4s ease-in-out;
+ }
+ .m-image img:hover
+ {
+     transform: scale(1.5);
+     border-radius: 10px;
+ }
+
+ footer
+ {
+     width: 100%; 
+     background: #262626;
+     padding: 50px;
+ }
+ .newsletter
+{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+.newsletter span
+{
+    font-size: 2em;
+    color: #7d0552;
+}
+.newsletter p
+{
+    font-size: 20px;
+    padding-top: 10px;
+}
+.newsletter label
+{
+    display: flex;
+}
+.newsletter input 
+{
+    padding: 20px;
+    width: 30vw;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 8px 0px 0px 8px;
+}
+.newsletter button
+{
+    padding: 20px;
+    width: 10vw;
+    font-size: 1.2em;
+    border: none;
+    background: #7d0552;
+    border-radius:  0px 8px  8px 0px;
+    color: #fff;
+}
+.f-contact
+{
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.f-contact div
+{
+  flex-basis: 20%;
+}
+.f-contact span
+{
+    font-size: 1.7em;
+}
+.f-contact div p
+{
+    line-height: 2em;
+    font-size: 1.2em;
+    color: gray;
+    cursor: pointer;
+}
+.f-contact div p:hover 
+{
+    color: white;
+}
+.f-contact i
+{
+    background: white;
+    color: black;
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px 5px;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+.f-contact i:hover
+{
+    background: transparent;
+    color: #fff;
+    border: 1px solid white;
+}
+
+
+
+@media (max-width:991px)
+{
+    header {
+        width: 100%;
+        height: 60vh;
+    }
+   nav
+    {
+        height: 60px;
+        padding: 0px 0px;
+    }
+    .logo
+    {
+        left: 20px;
+        font-size: 10px;
+    }
+    .menu
+    {
+        display: none;
+        visibility: hidden;
+    }
+    .menu.active1
+    {
+        position: absolute;
+        visibility: visible;
+        width: 50vw;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 60px;
+        right: 00px;
+        background-color: #797979;
+        border-radius: 60px 0px 60px 60px;
+    }
+    .menu.active1 ul 
+    {
+        margin: auto 10px;
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+    .menu.active1 li 
+    {
+       list-style: none;
+       /* text-align: center; */
+       position: relative;
+        color: #fff;
+        padding: 10px;
+        right:25vw;
+    }
+    .menu.active1 li a 
+    {
+        font-size: 2ch;
+        color: #fff;
+    }
+    .menu.active1 li a.home
+    {
+        color: #7d0552;
+    }
+    .btn
+    {
+        font: size 3px; 
+        right: 70px;
+    }
+    .btn button
+    {
+        width: 60px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .menubar
+    {
+        position: absolute;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        filter:grayscale();
+       background-image: url(menuopen.png);
+       cursor: pointer;
+       border: 1px solid black;
+       border-radius: 8px;
+    }
+    .menubar.active1
+    {
+        position: absolute;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+       background-image: url(menuclose.png);
+       cursor: pointer;
+       border: 1px solid black;
+       border-radius: 8px;
+    }
+    
+    .h-text
+    {
+        top: 30%;
+        left: 50%;
+    }
+    #camera
+     {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .h-text h1
+    {
+        font-size: 2ch;
+    }
+    .h-text input 
+    {
+        width: 70%;
+        font-size: 1.5ch;
+    }
+    .h-text button 
+    {
+        font-size: 1.5ch;
+    }
+    .portfolio-menu ul li
+     {
+       
+        margin: 10px 0px;
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    
+    .portfolio-item .item {
+        width: 170px;
+        height: 100px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+    .member-info h1
+    {
+        font-size: 2.5em;
+    }
+    .member-profile
+    {
+        width: 6em;
+        height: 6em;
+    }
+    .member-card h2
+    {
+        font-size: 1em;
+    }
+    .member-card p
+    {
+        margin: 10px 0px;
+        line-height: 1.2em;
+        padding: 0px;
+        font-size: 1em
+        
+    }
+    .share img
+    {
+        margin: 10px;
+        width: 2em;
+        height: 2em;
+    }
+
+    .m-image
+    {
+        margin-top: 30px;
+    }
+    .m-image img
+    {
+        width: 50%;
+        height: auto;
+    }
+    
+    footer 
+    {
+        /* font-size: 10px; */
+        padding: 10px ;
+    }
+    .newsletter
+    {
+        padding: 5px;
+        margin-top: 10px;
+    }
+    .newsletter span 
+    {
+        font-size: 3ch;
+    }
+    .newsletter p 
+    {
+        font-size: 2ch;
+    }
+    .newsletter input
+    {
+        font-size: 10px;
+        width: 100px;
+        height: 30px;
+        font-size: 1.2ch;
+        padding: 2px 2px;
+    }
+    .newsletter button 
+    {
+        font-size: 1.2ch;
+        padding: 2px 2px;
+        width: 50px;
+    }
+    .f-contact div 
+    {
+       display: flexbox;
+       flex-basis: content;
+       margin-bottom: 30px;
+    }
+    .f-contact span 
+    {
+        font-size: 2ch;
+    }
+    .f-contact p 
+    {
+        font-size: 1.2ch;
+    } 
+    .f-contact i 
+    {
+        padding: 10px;
+        font-size: 0.5em;
+        margin: 10px 5px;
+    }
+
+
+
+
+
+
+}
